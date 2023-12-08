@@ -3,6 +3,7 @@ const { ethers, upgrades, deployments, getNamedAccounts, network } = require("ha
 module.exports = async function deployTetherToken() {
     const { log } = deployments;
     const { deployer } = await getNamedAccounts();
+    console.log(deployer);
 
     const args = ["USDT Token", "USDT", ethers.parseUnits("1000000", "ether")]; 
 
